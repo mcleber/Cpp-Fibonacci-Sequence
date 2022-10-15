@@ -1,20 +1,25 @@
 # C++ Fibonacci Sequence
 
-"
-The Fibonacci Sequence can be written as a Rule.
+The Fibonacci numbers may be defined by the recurrence relation.
 
-_n  = 	0	1	2	3	4	5	6	... <br>
-Xn  =	0	1	1	2	3	5	8 ...
+F0 = 0, F1 = 1,
 
-The Rule is Xn = Xn−1 + Xn−2
+and
 
-where:
+Fn = F(n-1) + F(n-2)
 
-Xn is term number "n"
+for n > 1.
 
-Xn−1 is the previous term (n−1)
+Under some older definitions, the value F0 = 0 is omitted, so that the sequence starts with F1 = F2 = 1, and the recurrence Fn = F(n-1) + F(n-2) is valid for n > 2.
 
-Xn−2 is the term before that (n−2)
-"
+The first 10 Fibonacci numbers Fn are:
 
-Source: [Math is Fun](https://www.mathsisfun.com/numbers/fibonacci-sequence.html)
+| F0  | F1  | F2  | F3  | F4  | F5  | F6  | F7  | F8  | F9  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 0   | 1   | 1   | 2   | 3   | 5   | 8   | 13  | 21  | 34  |
+
+### Sources
+
+[Wikipedia: Fibonacci Number](https://en.wikipedia.org/wiki/Fibonacci_number)
+
+[Math is Fun: Fibonacci Sequence](https://www.mathsisfun.com/numbers/fibonacci-sequence.html)
