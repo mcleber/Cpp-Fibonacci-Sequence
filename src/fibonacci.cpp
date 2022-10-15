@@ -24,6 +24,11 @@ int main()
 		std::cout << FibSeq << ", ";
 	}
 
+	// Golden Ratio
+	std::cout << "\n\nGolden Ratio to Calculate Fibonacci Numbers";
+	int GoldenRatio = (pow(1.618034, numIn) - pow(1 - 1.618034, numIn)) / sqrt(5);
+	std::cout << "\nFor the term " << numIn << " is: " << GoldenRatio << std::endl;
+
 	std::cout << std::endl;
 	system("PAUSE");
 	return 0;
