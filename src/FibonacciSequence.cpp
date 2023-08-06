@@ -1,36 +1,56 @@
 #include <iostream>
+#include <cmath>
+
+// Recursive function
+int fibonacci(int numIn)
+{
+	return (numIn <= 1) ? 1 : fibonacci(numIn - 1) + fibonacci(numIn - 2);
+}
 
 int main()
 {
-	int numIn;
-	long double termA{ 0 }, termB{ 1 }, fibSeq, goldenRatio;
+	system("clear || cls");
 
-	system("CLS");
+	int numIn, i;
+	long double termA{1}, termB{1}, fibSeq, goldenRatio;
 
 	std::cout << "======================" << std::endl;
 	std::cout << "  Fibonacci Sequence  " << std::endl;
+	std::cout << "        v.1.1         " << std::endl;
 	std::cout << "======================" << std::endl;
 
-	std::cout << "Enter the number of terms: ";
+	std::cout << "\nEnter the number of terms: ";
 	std::cin >> numIn;
 
-	std::cout << "Fibonacci Sequence: " << termA << ", " << termB << ", ";
+	{ // Recursive Function Scope
+		std::cout << "\n-> Recursive scope: ";
 
-	for (int i = 2; i < numIn; ++i)
-	{
-		fibSeq = termA + termB;
-		termA = termB;
-		termB = fibSeq;
-
-		std::cout << fibSeq << ", ";
+		while (i < numIn)
+		{
+			std::cout << fibonacci(i);
+			++i;
+			std::cout << ", ";
+		}
 	}
 
-	// Golden Ratio
-	std::cout << "\n\nGolden Ratio to Calculate Fibonacci Numbers";
-	goldenRatio = (pow(1.618034, numIn) - pow(1 - 1.618034, numIn)) / sqrt(5);
-	std::cout << "\nFor the term " << numIn << " is: " << goldenRatio << std::endl;
+	{ // For Loop Scope
+		std::cout << "\n\n-> For loop scope: " << termA << ", " << termB << ", ";
+
+		for (int i = 2; i < numIn; ++i)
+		{
+			fibSeq = termA + termB;
+			termA = termB;
+			termB = fibSeq;
+
+			std::cout << fibSeq << ", ";
+		}
+	}
+
+	{ // Golden Ratio Scope
+		goldenRatio = (pow(1.618034, numIn) - pow(1 - 1.618034, numIn)) / sqrt(5);
+		std::cout << "\n\n-> Golden Ratio for the term " << numIn << " is: " << goldenRatio << '\n';
+	}
 
 	std::cout << std::endl;
-	system("PAUSE");
 	return 0;
 }
