@@ -10,7 +10,7 @@ The first 10 Fibonacci numbers Fn are:
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Fn = | 0   | 1   | 1   | 2   | 3   | 5   | 8   | 13  | 21  | 34  |
 
-### Update 06/Ago/2023 - v.1.1:
+### Update 2023/08/06 - v.1.1:
 - Added sequence calculation using recursive function;
 - Added the header file cmath;
 - Fixed system("CLS") to system("clear || cls");
